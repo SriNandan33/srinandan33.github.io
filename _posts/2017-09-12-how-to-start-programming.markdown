@@ -1,17 +1,115 @@
 ---
 layout: post
-title: How To Start Programming
+title: This is a test post with README.md of requests library
 date: 2017-09-12 00:00:00 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: how-to-start.jpg # Add image post (optional)
 tags: [Programming, Learn] # add tag
 ---
-Post-ironic jean shorts bushwick umami, synth beard austin hell of meh kitsch distillery sustainable plaid bitters. Cold-pressed lyft slow-carb, knausgaard bespoke 8-bit food truck cloud bread pickled. Taiyaki bitters trust fund heirloom craft beer single-origin coffee. Readymade fam vape blue bottle cold-pressed, flannel polaroid. Aesthetic four dollar toast semiotics af bicycle rights. Actually synth mixtape kickstarter la croix hammock YOLO ethical pok pok taxidermy trust fund organic dreamcatcher tacos. Franzen four loko man braid letterpress umami offal. Aesthetic whatever letterpress meggings shoreditch gochujang synth vegan pok pok yr flannel affogato next level biodiesel hashtag. Banjo vaporware lyft unicorn tumblr. Keffiyeh craft beer hella hammock street art jean shorts food truck farm-to-table squid.
+Requests: HTTP for Humans™
+==========================
 
->Tattooed pour-over taiyaki woke, skateboard subway tile PBR&B etsy distillery street art pok pok wolf 8-bit. Vegan bicycle rights schlitz subway tile unicorn taiyaki.
+[![image](https://img.shields.io/pypi/v/requests.svg)](https://pypi.org/project/requests/)
+[![image](https://img.shields.io/pypi/l/requests.svg)](https://pypi.org/project/requests/)
+[![image](https://img.shields.io/pypi/pyversions/requests.svg)](https://pypi.org/project/requests/)
+[![codecov.io](https://codecov.io/github/requests/requests/coverage.svg?branch=master)](https://codecov.io/github/requests/requests)
+[![image](https://img.shields.io/github/contributors/requests/requests.svg)](https://github.com/requests/requests/graphs/contributors)
+[![image](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/kennethreitz)
 
-Meditation literally adaptogen locavore raclette artisan polaroid occupy sriracha bitters gochujang kale chips mixtape. Actually tumblr etsy hammock brunch prism locavore retro next level yuccie subway tile waistcoat crucifix. Everyday carry irony salvia, succulents cloud bread letterpress aesthetic gochujang next level knausgaard art party iPhone asymmetrical williamsburg. Iceland slow-carb knausgaard narwhal skateboard kitsch fashion axe. Man bun celiac street art, cliche PBR&B lomo blue bottle beard bitters. Mlkshk occupy offal dreamcatcher. Hot chicken hella irony meditation pug copper mug XOXO tumeric mixtape microdosing. Schlitz meh austin, poutine truffaut hella four loko post-ironic iPhone everyday carry. Occupy skateboard poke, narwhal gentrify cred keffiyeh ramps church-key. Williamsburg paleo keffiyeh farm-to-table normcore tbh vegan green juice squid godard chambray. DIY organic letterpress, venmo salvia crucifix gluten-free. Yr celiac tbh selfies activated charcoal.
+Requests is the only *Non-GMO* HTTP library for Python, safe for human
+consumption.
 
-Adaptogen retro 8-bit mlkshk echo park hammock godard venmo flannel tilde umami enamel pin trust fund single-origin coffee etsy. Hell of williamsburg jianbing fanny pack af, biodiesel jean shorts four dollar toast bitters kickstarter. DIY edison bulb keffiyeh raclette. Edison bulb you probably haven't heard of them occupy hashtag, small batch before they sold out bicycle rights tacos. IPhone selfies banh mi sartorial, typewriter seitan plaid. Fanny pack williamsburg gentrify plaid hoodie. Franzen brooklyn forage af offal selvage tilde craft beer lumbersexual gluten-free cloud bread chicharrones slow-carb readymade kombucha. Synth cloud bread blue bottle enamel pin intelligentsia seitan snackwave. Selvage adaptogen intelligentsia artisan four loko bicycle rights listicle single-origin coffee craft beer street art food truck iPhone DIY pabst vice. Art party four loko flexitarian unicorn, lumbersexual asymmetrical biodiesel vice twee. Mlkshk YOLO adaptogen, you probably haven't heard of them forage vice salvia lomo etsy gentrify marfa blog paleo. Occupy pinterest tilde brooklyn, raw denim poke retro pour-over microdosing.
+![image](https://farm5.staticflickr.com/4317/35198386374_1939af3de6_k_d.jpg)
 
-Skateboard keytar actually disrupt taiyaki, synth biodiesel. Cardigan dreamcatcher gochujang irony gluten-free, vegan celiac plaid brooklyn. Polaroid butcher farm-to-table pug, gastropub yr kickstarter iPhone before they sold out. Marfa cornhole migas hashtag flannel fashion axe deep v kogi. Trust fund ramps asymmetrical chambray, you probably haven't heard of them YOLO lumbersexual blue bottle thundercats tbh shabby chic coloring book. Kickstarter ugh try-hard four dollar toast master cleanse. Semiotics bespoke art party twee roof party cardigan. Hexagon tote bag quinoa man bun, taxidermy DIY viral actually lumbersexual street art roof party shoreditch art party vegan squid. Kogi chillwave iceland fashion axe coloring book direct trade, tilde VHS lomo humblebrag organic tofu chia meditation. Hella keytar shabby chic 90's taxidermy tacos marfa. Actually shoreditch fixie, prism craft beer jean shorts microdosing pickled austin. Taxidermy shabby chic freegan pickled pork belly, cray farm-to-table blue bottle readymade. 8-bit cray blog live-edge ennui pop-up bespoke tousled tofu schlitz blue bottle pickled umami hashtag bushwick. Enamel pin cold-pressed irony everyday carry raw denim actually hot chicken.
+{% highlight python %}
+Behold, the power of Requests:
+{.sourceCode .python}
+>>> import requests
+>>> r = requests.get('https://api.github.com/user', auth=('user', 'pass'))
+>>> r.status_code
+200
+>>> r.headers['content-type']
+'application/json; charset=utf8'
+>>> r.encoding
+'utf-8'
+>>> r.text
+u'{"type":"User"...'
+>>> r.json()
+{u'disk_usage': 368627, u'private_gists': 484, ...}
+{% endhighlight %}
+
+See [the similar code, sans Requests](https://gist.github.com/973705).
+
+[![image](https://raw.githubusercontent.com/requests/requests/master/docs/_static/requests-logo-small.png)](http://docs.python-requests.org/)
+
+Requests allows you to send *organic, grass-fed* HTTP/1.1 requests,
+without the need for manual labor. There's no need to manually add query
+strings to your URLs, or to form-encode your POST data. Keep-alive and
+HTTP connection pooling are 100% automatic, thanks to
+[urllib3](https://github.com/shazow/urllib3).
+
+Besides, all the cool kids are doing it. Requests is one of the most
+downloaded Python packages of all time, pulling in over 11,000,000
+downloads every month. You don't want to be left out!
+
+Feature Support
+---------------
+
+Requests is ready for today's web.
+
+-   International Domains and URLs
+-   Keep-Alive & Connection Pooling
+-   Sessions with Cookie Persistence
+-   Browser-style SSL Verification
+-   Basic/Digest Authentication
+-   Elegant Key/Value Cookies
+-   Automatic Decompression
+-   Automatic Content Decoding
+-   Unicode Response Bodies
+-   Multipart File Uploads
+-   HTTP(S) Proxy Support
+-   Connection Timeouts
+-   Streaming Downloads
+-   `.netrc` Support
+-   Chunked Requests
+
+Requests officially supports Python 2.7 & 3.4–3.7, and runs great on
+PyPy.
+
+Installation
+------------
+
+To install Requests, simply use [pipenv](http://pipenv.org/) (or pip, of
+course):
+
+{% highlight shell %}
+{.sourceCode .bash}
+$ pipenv install requests
+{% endhighlight %}
+✨🍰✨
+
+Satisfaction guaranteed.
+
+Documentation
+-------------
+
+Fantastic documentation is available at
+<http://docs.python-requests.org/>, for a limited time only.
+
+How to Contribute
+-----------------
+
+1.  Become more familiar with the project by reading our [Contributor's Guide](http://docs.python-requests.org/en/latest/dev/contributing/) and our [development philosophy](http://docs.python-requests.org/en/latest/dev/philosophy/).
+2.  Check for open issues or open a fresh issue to start a discussion
+    around a feature idea or a bug. There is a [Contributor
+    Friendly](https://github.com/requests/requests/issues?direction=desc&labels=Contributor+Friendly&page=1&sort=updated&state=open)
+    tag for issues that should be ideal for people who are not very
+    familiar with the codebase yet.
+3.  Fork [the repository](https://github.com/requests/requests) on
+    GitHub to start making your changes to the **master** branch (or
+    branch off of it).
+4.  Write a test which shows that the bug was fixed or that the feature
+    works as expected.
+5.  Send a [pull request](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork) and bug the maintainer until it gets merged and
+    published. :) Make sure to add yourself to
+    [AUTHORS](https://github.com/requests/requests/blob/master/AUTHORS.rst).
